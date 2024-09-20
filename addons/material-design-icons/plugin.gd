@@ -50,7 +50,13 @@ func show_icon_finder():
 
 func _exit_tree():
 	remove_tool_menu_item("Find Material Icon")
+	remove_tool_menu_item("Material Icon Finder Dock")
+	remove_tool_menu_item("Material Icon Help")
+
 	command_palette.remove_command("find_icon")
+	command_palette.remove_command("icon_finder_dock")
+	command_palette.remove_command("icon_help")
+
 	remove_autoload_singleton("MaterialIconsDB")
 
 	if icon_finder:
